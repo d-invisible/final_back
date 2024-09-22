@@ -1,9 +1,13 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');//added---
+const cors = require('cors');
 const app = express();
 
 // Middleware to parse JSON requests
 app.use(bodyParser.json());
+
+app.use(cors());//added----
+
 
 // Utility function to check if a string is numeric
 function isNumeric(str) {
